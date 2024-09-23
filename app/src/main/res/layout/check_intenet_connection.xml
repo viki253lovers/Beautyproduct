@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+  <ImageView
+      android:layout_width="150sp"
+      android:layout_height="150sp"
+      android:id="@+id/ivchekinternetconnection"
+      android:src="@drawable/disable_wifi"
+      android:layout_gravity="center"
+      android:layout_marginTop="8dp"
+      />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:fontFamily="@font/angkor"
+      android:text="Opps!"
+      android:textColor="@color/light_pink"
+      android:textSize="45dp"
+      android:textStyle="bold"/>
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="8dp"
+      android:fontFamily="sans-serif"
+      android:text="No internet connection"
+      android:textColor="@color/black"
+      android:textSize="24dp"
+      android:textStyle="bold"/>
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="8dp"
+      android:fontFamily="sans-serif"
+      android:text="Please check your connection"
+      android:textColor="@color/light_pink"
+      android:textSize="23dp"
+      android:textStyle="bold"/>
+  <androidx.appcompat.widget.AppCompatButton
+      android:layout_width="200dp"
+      android:layout_height="50dp"
+      android:id="@+id/btntryagain"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="40dp"
+    android:text="try again"
+    android:textColor="@color/white"
+    android:background="@drawable/btn_bg_try_again"
+    android:layout_marginBottom="50dp"
+      />
+</LinearLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".RegistrationActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/ivRegisterlogo"
+    android:src="@drawable/logo"
+    android:layout_marginTop="16dp"
+    android:layout_gravity="center_horizontal"
+    />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvRegisterHere"
+            android:text="Register Here"
+            android:textColor="@color/pink"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/etRegisterName"
+            android:hint="Name"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:padding="8dp"
+            android:drawableLeft="@drawable/person"
+            android:drawablePadding="8dp"
+            android:background="@drawable/translate"
+            android:fontFamily="@font/alata"
+            android:textStyle="italic"
+            android:layout_marginTop="16dp"
+            android:layout_margin="16dp"
+            android:inputType="textPersonName"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/etRegisterMobileNo"
+            android:hint="Mobile No"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:drawableLeft="@drawable/phone"
+            android:padding="8dp"
+            android:drawablePadding="8dp"
+            android:background="@drawable/translate"
+            android:fontFamily="@font/alata"
+            android:textStyle="italic"
+            android:layout_marginTop="16dp"
+            android:layout_margin="16dp"
+            android:inputType="number"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/etRegisterEmailid"
+            android:hint="Email Id"
+            android:drawableLeft="@drawable/emailid"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:padding="8dp"
+            android:drawablePadding="8dp"
+            android:background="@drawable/translate"
+            android:fontFamily="@font/alata"
+            android:textStyle="italic"
+            android:layout_marginTop="16dp"
+            android:layout_margin="16dp"
+            android:inputType="text"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/etRegisterUsername"
+            android:hint="Username"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:padding="8dp"
+            android:drawablePadding="8dp"
+            android:drawableLeft="@drawable/username"
+            android:background="@drawable/translate"
+            android:fontFamily="@font/alata"
+            android:textStyle="italic"
+            android:layout_marginTop="16dp"
+            android:layout_margin="16dp"
+            android:inputType="text"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/etRegisterPassword"
+            android:hint="Password"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:padding="8dp"
+            android:background="@drawable/translate"
+            android:fontFamily="@font/alata"
+            android:drawableLeft="@drawable/lock"
+            android:drawablePadding="8dp"
+            android:textStyle="italic"
+            android:layout_marginTop="16dp"
+            android:layout_margin="16dp"
+            android:inputType="textPassword"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:id="@+id/btnRegisterbutton"
+            android:text="Register"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/alata"
+            android:background="@drawable/buttonshape"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>
