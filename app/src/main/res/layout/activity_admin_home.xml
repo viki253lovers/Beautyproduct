@@ -16,11 +16,12 @@
         android:paddingLeft="8sp"
         android:background="@drawable/et_bg_shape"
         android:layout_margin="16dp"/>
-   <ListView
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:id="@+id/lvCategoryFragmentShowMultipleData"
-       />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:id="@+id/rvAdminHomeActivityShowMultipleData"
+        />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

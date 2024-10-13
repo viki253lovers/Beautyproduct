@@ -124,7 +124,7 @@ public class RegistrationActivity extends AppCompatActivity {
         params.put("emailid",etEmailid.getText().toString());
         params.put("username",etUsername.getText().toString());
         params.put("password",etPassword.getText().toString());
-        client.post("http://192.168.177.191:80/msbteAPI/userregisteration.php",params,new JsonHttpResponseHandler() {
+        client.post("http://192.168.218.191:80/msbteAPI/userregisteration.php",params,new JsonHttpResponseHandler() {
                     @Override
                     public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                         super.onSuccess(statusCode, headers, response);

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/HomeMenuLogout"
+        android:title="Logout"
+        android:icon="@drawable/icon_logout"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/HomeMenuMore"
+        android:title="More"
+        app:showAsAction="always"
+        android:icon="@drawable/icon_more"
+        >
+    <menu>
+
+        <item
+            android:id="@+id/HomeMenuAboutUs"
+            android:title="About Us"
+            android:icon="@drawable/icon_aboutus"
+            app:showAsAction="never"
+            />
+        <item
+            android:id="@+id/HomeMenuSettings"
+            android:title="Settings"
+            android:icon="@drawable/icon_settings"
+            app:showAsAction="never"
+            />
+
+        <item
+            android:id="@+id/HomeMenuMyProfile"
+            android:title="Myprofile"
+            android:icon="@drawable/username"
+            app:showAsAction="never"
+            />
+    </menu>
+    </item>
+</menu>

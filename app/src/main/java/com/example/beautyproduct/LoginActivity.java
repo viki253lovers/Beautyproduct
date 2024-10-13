@@ -3,8 +3,10 @@ package com.example.beautyproduct;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.util.LogPrinter;
@@ -22,6 +24,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
+import com.example.beautyproduct.Admin.AdminHomeActivity;
 import com.example.beautyproduct.common.NetworkChangeListener;
 import com.example.beautyproduct.common.Urls;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -48,15 +51,23 @@ public class LoginActivity extends AppCompatActivity {
     CheckBox checkBox;
     Button btnlogin;
     ProgressDialog progressDialog;
+
     GoogleSignInOptions googleSignInOptions;
     GoogleSignInClient googleSignInClient;
     AppCompatButton btnSignWithGoogle;
 
     NetworkChangeListener networkChangeListener = new NetworkChangeListener();
+
+    SharedPreferences preferences;//temp data store this class
+    SharedPreferences.Editor editor;//put data
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        preferences= PreferenceManager.getDefaultSharedPreferences(LoginActivity.this);
+        editor =preferences.edit();
+
         ivlogo=findViewById(R.id.ivloginlogo);
         tvhere=findViewById(R.id.tvloginhere);
         tvnewuser=findViewById(R.id.tvloginnewuser);
@@ -195,11 +206,18 @@ public class LoginActivity extends AppCompatActivity {
 
                             try {
                                 String status=response.getString("sucess");
-                                if (status.equals("1"))
+                                String struserrole=response.getString("userrole");
+                                if (status.equals("1") &&struserrole.equals("user"))
                                 {
                                     Toast.makeText(LoginActivity.this, "Login successfully done", Toast.LENGTH_SHORT).show();
                                     Intent intent=new Intent(LoginActivity.this,HomeActivity.class);
+                                    editor.putString("username",etusername.getText().toString()).commit();
                                     startActivity(intent);
+                                }
+                                else if(status.equals("1") &&struserrole.equals("admin"))
+                                {
+                                    Intent intent=new Intent(LoginActivity.this, AdminHomeActivity.class);
+                                    startActivity(intent); 
                                 }
                                 else
                                 {
